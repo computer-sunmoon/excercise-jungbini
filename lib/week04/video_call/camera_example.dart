@@ -1,3 +1,5 @@
+import 'dart:nativewrappers/_internal/vm/bin/common_patch.dart';
+
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 
@@ -30,6 +32,9 @@ class _CameraAppState() extends State<CameraApp> {
   }
 
   initializeCamera() async {
-
+    try {
+      // 4. 가장 첫 번째 카메라로 카메라 설정하기
+      controller = CameraController(_cameras[0], ResolutionPreset.max);
+    }
   }
 }
