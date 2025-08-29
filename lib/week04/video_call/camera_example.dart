@@ -16,5 +16,10 @@ Future<void> main() async {
 class CameraApp extends StatefulWidget {
   const CameraApp({Key? key}) : super(key: key);
 
-  
+  State<CameraApp> createState() => _CameraAppState();
+}
+
+class _CameraAppState() extends State<CameraApp> {
+  // 3. 카메라를 제어할 수 있는 컨트롤러 선언
+  late Camera
 }
