@@ -1,5 +1,3 @@
-import 'dart:nativewrappers/_internal/vm/bin/common_patch.dart';
-
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 
@@ -53,5 +51,23 @@ class _CameraAppState() extends State<CameraApp> {
         }
       }
     }
+  }
+
+  void dispose() {
+    // 컨트롤러 삭제
+    controller.dispose();
+    super.dispose();
+  }
+
+  Widget build(BuildContext context) {
+
+    // 6. 카메라 초기화 상태 확인
+    if (!controller.value.isInitialized) {
+      return Container();
+    }
+    return MaterialApp(  
+      // 7. 카메라 보여주기
+      home: CameraPreview(controller),
+    );
   }
 }
