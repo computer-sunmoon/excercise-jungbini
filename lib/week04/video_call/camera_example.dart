@@ -40,6 +40,17 @@ class _CameraAppState() extends State<CameraApp> {
       await controller.initialize();
 
       setState(() { });
+
+    } catch (e) {
+      // 에러 났을 때 출력
+      if (e is CameraException) {
+        switch (e.code) {
+          case 'CameraAccessDenied':
+            break;
+          default:
+            print('Handle other erro')
+        }
+      }
     }
   }
 }
