@@ -21,5 +21,15 @@ class CameraApp extends StatefulWidget {
 
 class _CameraAppState() extends State<CameraApp> {
   // 3. 카메라를 제어할 수 있는 컨트롤러 선언
-  late Camera
+  late CameraController controller;
+
+  void initState() {
+    super.initState();
+
+    initializeCamera();
+  }
+
+  initializeCamera() async {
+
+  }
 }
