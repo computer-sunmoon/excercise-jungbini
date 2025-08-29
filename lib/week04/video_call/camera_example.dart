@@ -12,3 +12,7 @@ Future<void> main() async {
 
   runApp(const CameraApp());
 }
+
+class CameraApp extends StatefulWidget {
+  
+}
