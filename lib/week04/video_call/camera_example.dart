@@ -48,7 +48,8 @@ class _CameraAppState() extends State<CameraApp> {
           case 'CameraAccessDenied':
             break;
           default:
-            print('Handle other erro')
+            print('Handle other errors.');
+            break;
         }
       }
     }
