@@ -35,6 +35,11 @@ class _CameraAppState() extends State<CameraApp> {
     try {
       // 4. 가장 첫 번째 카메라로 카메라 설정하기
       controller = CameraController(_cameras[0], ResolutionPreset.max);
+
+      // 5. 카메라 초기화
+      await controller.initialize();
+
+      setState(() { });
     }
   }
 }
